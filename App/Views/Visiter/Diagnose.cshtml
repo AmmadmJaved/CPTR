@@ -1,0 +1,67 @@
+﻿@model App.Models.VisiterPatientViewModels.Diagnose
+
+<h4>Diagnose</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @*<form asp-action="Diagnose">*@
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DiagnoseId" class="control-label"></label>
+                <input asp-for="DiagnoseId" class="form-control" />
+                <span asp-validation-for="DiagnoseId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Laboratorytest" class="control-label"></label>
+                <input asp-for="Laboratorytest" class="form-control" />
+                <span asp-validation-for="Laboratorytest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bloodtest" class="control-label"></label>
+                <input asp-for="Bloodtest" class="form-control" />
+                <span asp-validation-for="Bloodtest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Urinetest" class="control-label"></label>
+                <input asp-for="Urinetest" class="form-control" />
+                <span asp-validation-for="Urinetest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Throatswab" class="control-label"></label>
+                <input asp-for="Throatswab" class="form-control" />
+                <span asp-validation-for="Throatswab" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stoolsample" class="control-label"></label>
+                <input asp-for="Stoolsample" class="form-control" />
+                <span asp-validation-for="Stoolsample" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Spinaltap_lumbarPuncture" class="control-label"></label>
+                <input asp-for="Spinaltap_lumbarPuncture" class="form-control" />
+                <span asp-validation-for="Spinaltap_lumbarPuncture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagingScans" class="control-label"></label>
+                <input asp-for="ImagingScans" class="form-control" />
+                <span asp-validation-for="ImagingScans" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Biopsies" class="control-label"></label>
+                <input asp-for="Biopsies" class="form-control" />
+                <span asp-validation-for="Biopsies" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>*@
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

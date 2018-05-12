@@ -19,5 +19,6 @@ namespace Data.Model
         public string Email { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }

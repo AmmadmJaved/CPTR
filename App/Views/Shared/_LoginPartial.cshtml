@@ -9,7 +9,7 @@
     <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
             <li><a asp-area="" asp-controller="Visiter" asp-action="VisiterDashboard"> Visiter's</a></li>
-            <li><a asp-area="" asp-controller="Home" asp-action="PhysicianDashboard"> Physician's</a></li>
+            <li><a asp-area="" asp-controller="Physician" asp-action="Dashboard"> Physician's</a></li>
             <li>
                 <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
             </li>

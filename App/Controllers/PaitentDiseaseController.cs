@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace App.Controllers
 {
-    public class PaitentDiseaseController : Controller
+    public class PatientDiseaseController : Controller
     {
         public IActionResult Index()
         {
