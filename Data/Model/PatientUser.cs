@@ -8,7 +8,7 @@ namespace Data.Model
     public class PatientUser
     {
         [Key]
-        public int Id { get; set; }
+        public int PatientUserId { get; set; }
         public string Name { get; set; }
         public string Age { get; set; }
         public string Gender { get; set; }
@@ -17,5 +17,7 @@ namespace Data.Model
         public string Email { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
+        public virtual ICollection<PatientDisease> PatientDiseases { get; set; }
     }
 }

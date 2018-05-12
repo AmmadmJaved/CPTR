@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using App.Models.AccountViewModels;
+using App.Models.VisiterPatientViewModels;
 using Data;
 using Data.MySqlRepositories;
 using Microsoft.AspNetCore.Identity;
@@ -41,18 +42,25 @@ namespace App.Controllers
         public IActionResult VisiterDashboard()
         {
 
-            var patientUserDetail = _patientUserRepository.GetAll();
-            List<PatientUserViewModel> PatientUserList = new List<PatientUserViewModel>();
-            PatientUserViewModel patientUser;
-            foreach (var visiter in patientUserDetail)
+            var physicianUserDetail = _physicianRepository.GetAll();
+            List<PhysicianViewModel> physicianList = new List<PhysicianViewModel>();
+            PhysicianViewModel physicianUser;
+            foreach (var physician in physicianUserDetail)
             {
-                patientUser = new PatientUserViewModel { Name = visiter.Name, Age = visiter.Age, Gender = visiter.Gender, City = visiter.City, CNIC = visiter.CNIC, Country = visiter.Country, Email = visiter.Email, Phone = visiter.Phone };
-                PatientUserList.Add(patientUser);
+                physicianUser = new PhysicianViewModel { Name = physician.Name, Qualification = physician.Qualification, Specialist = physician.Specialist, RegistrationNo = physician.RegistrationNo, Experience = physician.Experience, City = physician.City, CNIC = physician.CNIC, Country = physician.Country, Email = physician.Email, Phone = physician.Phone };
+                physicianList.Add(physicianUser);
             }
 
-            ViewData["Message"] = "Your visiter patient here's.";
-            return View(PatientUserList);
+            ViewData["Message"] = "Your Physician Here's.";
+            return View(physicianList);
 
+        }
+        public IActionResult AddPatientDisease()
+        {
+            PatientDisease patientDisease = new PatientDisease();
+            patientDisease.Diagnose = new Diagnose { Bloodtest =" pass" };
+            patientDisease.DiseasePrevalence = new DiseasePrevalence();
+            return View(patientDisease);
         }
         public IActionResult lastVistDate()
         {
@@ -60,7 +68,8 @@ namespace App.Controllers
         }
         public IActionResult currentPatientDiseases()
         {
-            return View();
+            return RedirectToAction(nameof(PatientDiseaseController.Index), "PatientDisease");
+            //return View();
         }
         public IActionResult visiterTreatmentHistory()
         {

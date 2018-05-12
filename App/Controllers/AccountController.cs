@@ -282,7 +282,7 @@ namespace App.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    PatientUser patientUser = new PatientUser { Age = "", City = "", CNIC = "13101-8199063-3", Country = "pakistan", Email = model.Email, Gender = model.Gender, Name = model.Name, Phone = "123456789" };
+                    PatientUser patientUser = new PatientUser {ApplicationUser = user , Age = "", City = "", CNIC = "13101-8199063-3", Country = "pakistan", Email = model.Email, Gender = model.Gender, Name = model.Name, Phone = "123456789" };
                     var add = await _patientUserRepository.AddAsync(patientUser);
                     _logger.LogInformation("User created a new account with password.");
 

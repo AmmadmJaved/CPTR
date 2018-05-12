@@ -9,11 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSecurity", "WebSecurity\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{E53AEDD7-7C87-4F9F-98B8-378B0F46BCD3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthEFServer", "AuthEFServer\AuthEFServer.csproj", "{F30D1194-E9CB-439D-ADCA-B6A0BDC35BB0}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{6C094729-EE37-47F8-931C-E967C8388A83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{4B9EAB67-6D4C-4393-AEC9-840053EB4D57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App", "App\App.csproj", "{4B9EAB67-6D4C-4393-AEC9-840053EB4D57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{E53AEDD7-7C87-4F9F-98B8-378B0F46BCD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E53AEDD7-7C87-4F9F-98B8-378B0F46BCD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E53AEDD7-7C87-4F9F-98B8-378B0F46BCD3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F30D1194-E9CB-439D-ADCA-B6A0BDC35BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F30D1194-E9CB-439D-ADCA-B6A0BDC35BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F30D1194-E9CB-439D-ADCA-B6A0BDC35BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F30D1194-E9CB-439D-ADCA-B6A0BDC35BB0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6C094729-EE37-47F8-931C-E967C8388A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6C094729-EE37-47F8-931C-E967C8388A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C094729-EE37-47F8-931C-E967C8388A83}.Release|Any CPU.ActiveCfg = Release|Any CPU

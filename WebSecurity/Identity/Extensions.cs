@@ -17,7 +17,7 @@ namespace WebSecurity.Identity
         public static void AddIdentityServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseMySql(configuration.GetConnectionString("DefaultConnection"), x => x.MigrationsAssembly("WebApp")));
+                options.UseMySql(configuration.GetConnectionString("DefaultConnection"), x => x.MigrationsAssembly("Data")));
             services.AddTransient<IProfileService, ProfileService>();
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()

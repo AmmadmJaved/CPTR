@@ -1,0 +1,42 @@
+﻿@model App.Models.VisiterPatientViewModels.DiseasePrevalence
+
+<h4>DiseasePrevalence</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @*<form asp-action="DiseasePrevalence">*@
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DiseasePrevalenceId" class="control-label"></label>
+                <input asp-for="DiseasePrevalenceId" class="form-control" />
+                <span asp-validation-for="DiseasePrevalenceId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Effectiviness" class="control-label"></label>
+                <input asp-for="Effectiviness" class="form-control" />
+                <span asp-validation-for="Effectiviness" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HealthyArea" class="control-label"></label>
+                <input asp-for="HealthyArea" class="form-control" />
+                <span asp-validation-for="HealthyArea" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalBodyHealth" class="control-label"></label>
+                <input asp-for="TotalBodyHealth" class="form-control" />
+                <span asp-validation-for="TotalBodyHealth" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>*@
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
